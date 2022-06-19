@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     @IBOutlet var actionButton: UIButton!
     
     private var colorType = ColorType.red
+    
     private let turnOn = 1.0
     private let turnOff = 0.3
 
