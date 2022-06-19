@@ -40,18 +40,18 @@ class ViewController: UIViewController {
 
         switch colorType {
         case .red:
-            changeViewsBackgroundColorWithAlpha(red: 1, yellow: 0.3, green: 0.3)
+            changeViewsAlpha(red: 1, yellow: 0.3, green: 0.3)
             colorType = .yellow
         case .yellow:
-            changeViewsBackgroundColorWithAlpha(red: 0.3, yellow: 1, green: 0.3)
+            changeViewsAlpha(red: 0.3, yellow: 1, green: 0.3)
             colorType = .green
         case .green:
-            changeViewsBackgroundColorWithAlpha(red: 0.3, yellow: 0.3, green: 1)
+            changeViewsAlpha(red: 0.3, yellow: 0.3, green: 1)
             colorType = .red
         }
     }
     
-    private func changeViewsBackgroundColorWithAlpha(
+    private func changeViewsAlpha(
         red: CGFloat,
         yellow: CGFloat,
         green: CGFloat
