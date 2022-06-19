@@ -24,14 +24,13 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        redView.alpha = 0.3
+        yellowView.alpha = 0.3
+        greenView.alpha = 0.3
+        
         redView.layer.cornerRadius = redView.bounds.width / 2
-        redView.backgroundColor = UIColor.red.withAlphaComponent(0.3)
-        
         yellowView.layer.cornerRadius = yellowView.bounds.width / 2
-        yellowView.backgroundColor = UIColor.yellow.withAlphaComponent(0.3)
-        
         greenView.layer.cornerRadius = greenView.bounds.width / 2
-        greenView.backgroundColor = UIColor.green.withAlphaComponent(0.3)
         
         actionButton.layer.cornerRadius = 10
     }
@@ -57,9 +56,9 @@ class ViewController: UIViewController {
         yellow: CGFloat,
         green: CGFloat
     ) {
-        redView.backgroundColor = UIColor.red.withAlphaComponent(red)
-        yellowView.backgroundColor = UIColor.yellow.withAlphaComponent(yellow)
-        greenView.backgroundColor = UIColor.green.withAlphaComponent(green)
+        redView.alpha = red
+        yellowView.alpha = yellow
+        greenView.alpha = green
     }
 }
 
