@@ -21,12 +21,14 @@ class ViewController: UIViewController {
     @IBOutlet var actionButton: UIButton!
     
     private var colorType = ColorType.red
+    private let turnOn = 1.0
+    private let turnOff = 0.3
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        redView.alpha = 0.3
-        yellowView.alpha = 0.3
-        greenView.alpha = 0.3
+        redView.alpha = turnOff
+        yellowView.alpha = turnOff
+        greenView.alpha = turnOff
         
         redView.layer.cornerRadius = redView.bounds.width / 2
         yellowView.layer.cornerRadius = yellowView.bounds.width / 2
@@ -40,13 +42,13 @@ class ViewController: UIViewController {
 
         switch colorType {
         case .red:
-            changeViewsAlpha(red: 1, yellow: 0.3, green: 0.3)
+            changeViewsAlpha(red: turnOn, yellow: turnOff, green: turnOff)
             colorType = .yellow
         case .yellow:
-            changeViewsAlpha(red: 0.3, yellow: 1, green: 0.3)
+            changeViewsAlpha(red: turnOff, yellow: turnOn, green: turnOff)
             colorType = .green
         case .green:
-            changeViewsAlpha(red: 0.3, yellow: 0.3, green: 1)
+            changeViewsAlpha(red: turnOff, yellow: turnOff, green: turnOn)
             colorType = .red
         }
     }
