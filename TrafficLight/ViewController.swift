@@ -7,23 +7,18 @@
 
 import UIKit
 
-private enum ColorType {
-    case red
-    case yellow
-    case green
-}
-
 class ViewController: UIViewController {
     
     @IBOutlet var redView: UIView!
     @IBOutlet var yellowView: UIView!
     @IBOutlet var greenView: UIView!
+    
     @IBOutlet var actionButton: UIButton!
     
     private var colorType = ColorType.red
     
-    private let turnOn = 1.0
-    private let turnOff = 0.3
+    private let turnOn: CGFloat = 1
+    private let turnOff: CGFloat = 0.3
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,3 +60,9 @@ class ViewController: UIViewController {
     }
 }
 
+// MARK: - ColorType
+extension ViewController {
+    private enum ColorType {
+        case red, yellow, green
+    }
+}
